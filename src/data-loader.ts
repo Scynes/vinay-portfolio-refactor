@@ -12,17 +12,18 @@ class DataLoader {
   }
 
   public async loadData(dataType: string): Promise<any> {
-    // Check cache first
     if (this.dataCache.has(dataType)) {
       return this.dataCache.get(dataType);
     }
-
+  
     try {
-      const response = await fetch(`/src/data/${dataType}.json`);
+      const base = import.meta.env.BASE_URL; // "/" in dev, "/vinay-portfolio-refactor/" in prod
+      const response = await fetch(`${base}data/${dataType}.json`);
+  
       if (!response.ok) {
         throw new Error(`Failed to load ${dataType} data: ${response.statusText}`);
       }
-      
+  
       const data = await response.json();
       this.dataCache.set(dataType, data);
       return data;
@@ -31,6 +32,7 @@ class DataLoader {
       return null;
     }
   }
+  
 
   public getData(dataType: string): any {
     return this.dataCache.get(dataType);
