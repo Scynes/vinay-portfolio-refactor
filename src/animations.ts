@@ -66,6 +66,33 @@ class AnimationController {
     });
   }
 
+  public observeTimelineItems(): void {
+    const timelineItems: NodeListOf<HTMLElement> = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach((item: HTMLElement) => {
+      if (!item.classList.contains('animate-in')) {
+        this.observer.observe(item);
+      }
+    });
+  }
+
+  public observeProjectCards(): void {
+    const projectCards: NodeListOf<HTMLElement> = document.querySelectorAll('.project-card');
+    projectCards.forEach((item: HTMLElement) => {
+      if (!item.classList.contains('animate-in')) {
+        this.observer.observe(item);
+      }
+    });
+  }
+
+  public observeTestimonialCards(): void {
+    const testimonialCards: NodeListOf<HTMLElement> = document.querySelectorAll('.testimonial-card');
+    testimonialCards.forEach((item: HTMLElement) => {
+      if (!item.classList.contains('animate-in')) {
+        this.observer.observe(item);
+      }
+    });
+  }
+
   private animateElement(element: HTMLElement): void {
     const index: number = Array.from(element.parentElement?.children || []).indexOf(element);
     const delay: number = index * this.animationDelay;

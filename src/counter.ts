@@ -1,10 +1,18 @@
 // Animated Counter Functionality
 class CounterController {
-  private observer: IntersectionObserver;
+  private static instance: CounterController;
+  private observer!: IntersectionObserver;
   private readonly animationDuration: number = 2000; // Duration in ms
 
   constructor() {
     this.init();
+  }
+
+  public static getInstance(): CounterController {
+    if (!CounterController.instance) {
+      CounterController.instance = new CounterController();
+    }
+    return CounterController.instance;
   }
 
   private init(): void {
@@ -25,15 +33,25 @@ class CounterController {
     );
 
     // Observe all stat numbers
+    this.observeStatNumbers();
+  }
+
+  public observeStatNumbers(): void {
     const statNumbers: NodeListOf<HTMLElement> = document.querySelectorAll('.stat-number');
     statNumbers.forEach((stat: HTMLElement) => {
-      this.observer.observe(stat);
+      // Only observe if not already animated
+      if (!stat.classList.contains('animated')) {
+        this.observer.observe(stat);
+      }
     });
   }
 
   private animateCounter(element: HTMLElement): void {
     const target: number = parseInt(element.getAttribute('data-target') || '0');
     const startTime: number = performance.now();
+    
+    // Mark as animated to prevent re-animation
+    element.classList.add('animated');
     
     const animate = (currentTime: number): void => {
       const elapsed: number = currentTime - startTime;
@@ -59,5 +77,8 @@ class CounterController {
 
 // Initialize counter controller when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  new CounterController();
+  CounterController.getInstance();
 });
+
+// Make CounterController available globally
+(window as any).CounterController = CounterController;

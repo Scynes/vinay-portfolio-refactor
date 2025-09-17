@@ -1,0 +1,40 @@
+{
+  "about": {
+    "title": "About",
+    "stats": [
+      {
+        "number": 8,
+        "label": "Years Experience"
+      },
+      {
+        "number": 50,
+        "label": "Projects Completed"
+      },
+      {
+        "number": 15,
+        "label": "Technologies"
+      }
+    ],
+    "intro": "As a kid, I loved building with Lego. Now, I enjoy building software. I have almost 8 years of industry experience in full-stack software development at companies in the building and retail sectors.",
+    "highlights": {
+      "title": "Key Accomplishments",
+      "items": [
+        "Designed database tables and RESTful APIs",
+        "Developed mobile apps for Android and iOS devices",
+        "Led front-end development of a large-scale project over several years"
+      ]
+    },
+    "collaboration": "Throughout my career, I've collaborated closely with stakeholders to gather requirements and ensure they were met. I've gained expertise in communicating technical aspects in a non-technical manner, bridging the gap between development teams and business stakeholders.",
+    "community": {
+      "title": "Community Engagement",
+      "intro": "Engaging with the tech community and building meaningful relationships is important to me:",
+      "items": [
+        "Volunteered at Manchester Tech Festival events",
+        "Attended many industry events and meetups",
+        "Recently joined the development team at Straightforward Job Site as a volunteer",
+        "Building a Sudoku web-app in collaboration with other developers through pair-programming sessions",
+        "Creating an open source version of the iconic Minesweeper game in public, enabling me to inspire, learn from, and connect with other developers"
+      ]
+    }
+  }
+}

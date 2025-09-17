@@ -1,0 +1,25 @@
+{
+  "experience": {
+    "title": "Experience",
+    "timeline": [
+      {
+        "title": "Software Developer",
+        "company": "Straightforward Job Site",
+        "date": "October 2024 - Present",
+        "description": "Building scalable web applications and improving user experience."
+      },
+      {
+        "title": "Software Developer",
+        "company": "Timpson",
+        "date": "Nov 2023 - Feb 2024",
+        "description": "Developed and maintained enterprise applications."
+      },
+      {
+        "title": "Software Developer",
+        "company": "MicroBuild",
+        "date": "Dec 2015 - March 2023",
+        "description": "Led development of multiple projects and mentored junior developers."
+      }
+    ]
+  }
+}

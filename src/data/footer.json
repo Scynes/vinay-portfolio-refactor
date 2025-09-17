@@ -1,0 +1,28 @@
+{
+  "footer": {
+    "name": "Vinay Gajjar",
+    "description": "Full-Stack Developer | Building digital solutions with passion",
+    "links": [
+      {
+        "icon": "fab fa-github",
+        "href": "https://github.com/v-gajjar",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "ariaLabel": "GitHub"
+      },
+      {
+        "icon": "fab fa-linkedin",
+        "href": "https://www.linkedin.com/in/vinaygajjar",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "ariaLabel": "LinkedIn"
+      },
+      {
+        "icon": "fas fa-envelope",
+        "href": "mailto:vgajjar22@gmail.com",
+        "ariaLabel": "Email"
+      }
+    ],
+    "copyright": "© 2025 Vinay Gajjar. All rights reserved."
+  }
+}

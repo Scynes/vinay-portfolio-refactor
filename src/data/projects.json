@@ -1,0 +1,27 @@
+{
+  "projects": {
+    "title": "Featured Projects",
+    "projects": [
+      {
+        "id": "sudoku",
+        "title": "Sudoku Game",
+        "description": "A responsive Sudoku app built with JavaScript and TailwindCSS - no fancy frameworks!",
+        "image": "sudoku.png",
+        "imageAlt": "Sudoku Game Preview",
+        "technologies": ["JavaScript", "TailwindCSS", "HTML5"],
+        "githubUrl": "",
+        "liveUrl": ""
+      },
+      {
+        "id": "minesweeper",
+        "title": "Minesweeper",
+        "description": "A fresh take on the classic Minesweeper experience with clean UX and modern tech.",
+        "image": "minesweeper.png",
+        "imageAlt": "Minesweeper Game Preview",
+        "technologies": ["React", "JavaScript", "CSS3"],
+        "githubUrl": "",
+        "liveUrl": ""
+      }
+    ]
+  }
+}

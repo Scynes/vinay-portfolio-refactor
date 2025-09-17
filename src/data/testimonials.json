@@ -1,0 +1,17 @@
+{
+  "testimonials": {
+    "title": "What People Say",
+    "testimonials": [
+      {
+        "text": "Working with Vinay on the BuiltInPublic project has been an absolute privilege. He consistently goes above and beyond, taking initiative on complex tasks and actively engaging in discussions. Vinay has a rare combination of technical skill, creativity, and genuine team spirit. Any team would be lucky to have him.",
+        "author": {
+          "name": "Christin Martin",
+          "title": "Project Manager & Developer",
+          "avatar": "/christin.jpg",
+          "avatarAlt": "Christin Martin",
+          "date": "August 2025"
+        }
+      }
+    ]
+  }
+}
