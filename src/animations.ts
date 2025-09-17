@@ -1,10 +1,18 @@
 // Scroll-triggered animations
 class AnimationController {
+  private static instance: AnimationController;
   private observer!: IntersectionObserver;
   private readonly animationDelay: number = 100; // Delay between animations in ms
 
   constructor() {
     this.init();
+  }
+
+  public static getInstance(): AnimationController {
+    if (!AnimationController.instance) {
+      AnimationController.instance = new AnimationController();
+    }
+    return AnimationController.instance;
   }
 
   private init(): void {
@@ -48,6 +56,16 @@ class AnimationController {
     });
   }
 
+  public observeSkillItems(): void {
+    const skillItems: NodeListOf<HTMLElement> = document.querySelectorAll('.skill-item');
+    skillItems.forEach((item: HTMLElement) => {
+      // Only observe if not already animated
+      if (!item.classList.contains('animate-in')) {
+        this.observer.observe(item);
+      }
+    });
+  }
+
   private animateElement(element: HTMLElement): void {
     const index: number = Array.from(element.parentElement?.children || []).indexOf(element);
     const delay: number = index * this.animationDelay;
@@ -60,5 +78,8 @@ class AnimationController {
 
 // Initialize animation controller when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  new AnimationController();
+  AnimationController.getInstance();
 });
+
+// Make AnimationController available globally
+(window as any).AnimationController = AnimationController;
