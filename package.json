@@ -13,6 +13,8 @@
     "vite": "^7.1.2"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.0.1"
+    "@fortawesome/fontawesome-free": "^7.0.1",
+    "@tailwindcss/vite": "^4.1.13",
+    "tailwindcss": "^4.1.13"
   }
 }
