@@ -1,4 +1,9 @@
 import './style.css'
+import './animations'
+import './theme'
+import './counter'
+import './loader'
+import './data-loader'
 
 // Navigation functionality
 const navToggle = document.getElementById('nav-toggle')
