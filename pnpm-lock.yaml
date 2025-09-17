@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  '@fortawesome/fontawesome-free':
+    specifier: ^7.0.1
+    version: 7.0.1
+
 devDependencies:
   typescript:
     specifier: ~5.8.3
@@ -247,6 +252,11 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fortawesome/fontawesome-free@7.0.1:
+    resolution: {integrity: sha512-RLmb9U6H2rJDnGxEqXxzy7ANPrQz7WK2/eTjdZqyU9uRU5W+FkAec9uU5gTYzFBH7aoXIw2WTJSCJR4KPlReQw==}
+    engines: {node: '>=6'}
+    dev: false
 
   /@rollup/rollup-android-arm-eabi@4.50.2:
     resolution: {integrity: sha512-uLN8NAiFVIRKX9ZQha8wy6UUs06UNSZ32xj6giK/rmMXAgKahwExvK6SsmgU5/brh4w/nSgj8e0k3c1HBQpa0A==}
