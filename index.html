@@ -449,6 +449,7 @@
     <script src="/src/theme.ts"></script>
     <script src="/src/counter.ts"></script>
     <script src="/src/loader.ts"></script>
+    <script src="/src/data-loader.ts"></script>
     <script>
       function toggleAccordion(sectionId) {
         const content = document.getElementById(sectionId + '-content');
@@ -463,6 +464,44 @@
           icon.classList.add('rotated');
           icon.textContent = '−';
         }
+      }
+
+      function openProjectModal(projectId) {
+        // Get project data from the data loader
+        const dataLoader = DataLoader.getInstance();
+        const projectsData = dataLoader.getData('projects');
+        
+        if (!projectsData?.projects) return;
+        
+        const project = projectsData.projects.find(p => p.id === projectId);
+        if (!project) return;
+
+        const modal = document.getElementById('project-modal');
+        const modalBody = document.getElementById('modal-body');
+        
+        modalBody.innerHTML = `
+          <h2>${project.title}</h2>
+          <div class="project-image">
+            <img src="${project.image}" alt="${project.title}">
+          </div>
+          <p class="project-description">${project.description}</p>
+          <div class="project-tech">
+            ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+          </div>
+          <div class="project-links">
+            ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>` : ''}
+            ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo</a>` : ''}
+          </div>
+        `;
+        
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeProjectModal() {
+        const modal = document.getElementById('project-modal');
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
       }
 
       // Set initial state for accordions (expanded by default)

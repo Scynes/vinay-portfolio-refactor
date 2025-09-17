@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "id": "minesweeper",
+      "title": "Minesweeper",
+      "description": "A modern reimagining of the classic Minesweeper game built with React and TypeScript. Features include customizable difficulty levels, smooth animations, and a clean, intuitive interface.",
+      "technologies": ["React", "TypeScript", "CSS3", "Vite"],
+      "image": "/minesweeper.png",
+      "githubUrl": "https://github.com/v-gajjar/Minesweeper",
+      "liveUrl": "https://v-gajjar.github.io/Minesweeper/",
+      "featured": true
+    },
+    {
+      "id": "sudoku",
+      "title": "Sudoku Solver",
+      "description": "An intelligent Sudoku puzzle generator and solver with multiple difficulty levels. Built using vanilla JavaScript with a focus on clean, efficient algorithms.",
+      "technologies": ["JavaScript", "HTML5", "CSS3"],
+      "image": "/sudoku.png",
+      "githubUrl": "https://github.com/v-gajjar/Sudoku-Solver",
+      "liveUrl": "https://v-gajjar.github.io/Sudoku-Solver/",
+      "featured": true
+    },
+    {
+      "id": "notes-app",
+      "title": "Notes App",
+      "description": "A Google Keep-inspired notes application built as part of John Crickett's coding challenges. Features include note creation, editing, and organization with a clean, modern interface.",
+      "technologies": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+      "image": "/notes-app.png",
+      "githubUrl": "https://github.com/v-gajjar/NotesApp",
+      "liveUrl": null,
+      "featured": false
+    }
+  ]
+}

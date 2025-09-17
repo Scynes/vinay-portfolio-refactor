@@ -1,0 +1,64 @@
+{
+  "technologies": [
+    {
+      "name": "React",
+      "icon": "fab fa-react",
+      "category": "Frontend"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "fab fa-js-square",
+      "category": "Language"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "fab fa-js-square",
+      "category": "Language"
+    },
+    {
+      "name": "Java",
+      "icon": "fab fa-java",
+      "category": "Language"
+    },
+    {
+      "name": "Spring Boot",
+      "icon": "fas fa-leaf",
+      "category": "Framework"
+    },
+    {
+      "name": "Node.js",
+      "icon": "fab fa-node-js",
+      "category": "Backend"
+    },
+    {
+      "name": "MySQL",
+      "icon": "fas fa-database",
+      "category": "Database"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "fas fa-database",
+      "category": "Database"
+    },
+    {
+      "name": "HTML5",
+      "icon": "fab fa-html5",
+      "category": "Frontend"
+    },
+    {
+      "name": "CSS3",
+      "icon": "fab fa-css3-alt",
+      "category": "Frontend"
+    },
+    {
+      "name": "Git",
+      "icon": "fab fa-git-alt",
+      "category": "Tools"
+    },
+    {
+      "name": "Docker",
+      "icon": "fab fa-docker",
+      "category": "DevOps"
+    }
+  ]
+}
