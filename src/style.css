@@ -536,12 +536,20 @@ body {
 }
 
 .tech-tag {
-  background: var(--gray-100);
-  color: var(--gray-700);
+  background: var(--light-green);
+  color: var(--primary-green-dark);
   padding: var(--spacing-1) var(--spacing-3);
   border-radius: var(--radius-sm);
   font-size: var(--font-size-xs);
   font-weight: 500;
+  border: 1px solid var(--primary-green-light);
+  transition: var(--transition-normal);
+}
+
+.tech-tag:hover {
+  background: var(--primary-green);
+  color: var(--white);
+  transform: translateY(-1px);
 }
 
 .project-links {
