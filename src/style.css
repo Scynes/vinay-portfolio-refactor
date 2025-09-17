@@ -811,9 +811,12 @@ body {
   border-radius: var(--radius-xl);
   width: 90%;
   max-width: 600px;
+  max-height: 90vh;
   position: relative;
   box-shadow: var(--shadow-xl);
   animation: modalSlideIn 0.3s ease-out;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 @keyframes modalSlideIn {
@@ -895,6 +898,12 @@ body {
   display: flex;
   gap: var(--spacing-4);
   justify-content: center;
+  width: 100%;
+}
+
+.modal .project-links .btn {
+  flex: 1;
+  min-width: 0;
 }
 
 /* Responsive Design */
@@ -1027,9 +1036,12 @@ body {
   }
 
   .modal-content {
-    margin: 10% auto;
+    margin: 2% auto;
     width: 95%;
-    padding: var(--spacing-6);
+    max-width: 95vw;
+    max-height: 96vh;
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
   }
 
   .modal .project-links {
@@ -1126,6 +1138,31 @@ body {
 
   .skills-marquee {
     display: none;
+  }
+
+  .modal-content {
+    margin: 1% auto;
+    width: 98%;
+    max-width: 98vw;
+    max-height: 98vh;
+    padding: var(--spacing-3);
+    border-radius: var(--radius-md);
+  }
+
+  .modal-content h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-3);
+  }
+
+  .project-description {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .modal-close {
+    top: var(--spacing-2);
+    right: var(--spacing-3);
+    font-size: var(--font-size-xl);
   }
 
   .skills-marquee::before,
