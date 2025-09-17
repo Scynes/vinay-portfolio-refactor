@@ -147,12 +147,17 @@
           </p>
           
           <div class="about-highlights">
-            <h3>Key Accomplishments</h3>
-            <ul>
-              <li>Designed database tables and RESTful APIs</li>
-              <li>Developed mobile apps for Android and iOS devices</li>
-              <li>Led front-end development of a large-scale project over several years</li>
-            </ul>
+            <h3 class="accordion-header" onclick="toggleAccordion('accomplishments')">
+              Key Accomplishments
+              <span class="accordion-icon" id="accomplishments-icon">+</span>
+            </h3>
+            <div class="accordion-content expanded" id="accomplishments-content">
+              <ul>
+                <li>Designed database tables and RESTful APIs</li>
+                <li>Developed mobile apps for Android and iOS devices</li>
+                <li>Led front-end development of a large-scale project over several years</li>
+              </ul>
+            </div>
           </div>
           
           <p class="about-collaboration">
@@ -160,20 +165,22 @@
           </p>
           
           <div class="about-community">
-            <h3>Community Engagement</h3>
-            <p>Engaging with the tech community and building meaningful relationships is important to me:</p>
-            <ul>
-              <li>Volunteered at Manchester Tech Festival events</li>
-              <li>Attended many industry events and meetups</li>
-              <li>Recently joined the development team at Straightforward Job Site as a volunteer</li>
-              <li>Building a Sudoku web-app in collaboration with other developers through pair-programming sessions</li>
-              <li>Creating an open source version of the iconic Minesweeper game in public, enabling me to inspire, learn from, and connect with other developers</li>
-            </ul>
+            <h3 class="accordion-header" onclick="toggleAccordion('community')">
+              Community Engagement
+              <span class="accordion-icon" id="community-icon">+</span>
+            </h3>
+            <div class="accordion-content expanded" id="community-content">
+              <p>Engaging with the tech community and building meaningful relationships is important to me:</p>
+              <ul>
+                <li>Volunteered at Manchester Tech Festival events</li>
+                <li>Attended many industry events and meetups</li>
+                <li>Recently joined the development team at Straightforward Job Site as a volunteer</li>
+                <li>Building a Sudoku web-app in collaboration with other developers through pair-programming sessions</li>
+                <li>Creating an open source version of the iconic Minesweeper game in public, enabling me to inspire, learn from, and connect with other developers</li>
+              </ul>
+            </div>
           </div>
           
-          <p class="about-cta">
-            If you're hiring, an aspiring techie, a fellow developer looking to collaborate or share knowledge, or you just like the look of my profile... Let's connect and see how we can bring value to each other's networks!
-          </p>
         </div>
       </div>
     </section>
@@ -452,5 +459,37 @@
     <script src="/src/theme.ts"></script>
     <script src="/src/counter.ts"></script>
     <script src="/src/loader.ts"></script>
+    <script>
+      function toggleAccordion(sectionId) {
+        const content = document.getElementById(sectionId + '-content');
+        const icon = document.getElementById(sectionId + '-icon');
+        
+        if (content.classList.contains('expanded')) {
+          content.classList.remove('expanded');
+          icon.classList.remove('rotated');
+          icon.textContent = '+';
+        } else {
+          content.classList.add('expanded');
+          icon.classList.add('rotated');
+          icon.textContent = '−';
+        }
+      }
+
+      // Set initial state for accordions (expanded by default)
+      document.addEventListener('DOMContentLoaded', function() {
+        const accomplishmentsIcon = document.getElementById('accomplishments-icon');
+        const communityIcon = document.getElementById('community-icon');
+        
+        if (accomplishmentsIcon) {
+          accomplishmentsIcon.classList.add('rotated');
+          accomplishmentsIcon.textContent = '−';
+        }
+        
+        if (communityIcon) {
+          communityIcon.classList.add('rotated');
+          communityIcon.textContent = '−';
+        }
+      });
+    </script>
   </body>
 </html>

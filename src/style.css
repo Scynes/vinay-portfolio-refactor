@@ -574,13 +574,56 @@ body {
   margin-bottom: var(--spacing-8);
 }
 
-.about-highlights h3,
-.about-community h3 {
+.accordion-header {
   font-size: var(--font-size-xl);
   font-weight: 600;
   color: var(--gray-900);
   margin-bottom: var(--spacing-4);
   font-family: var(--font-family-display);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-3) var(--spacing-4);
+  background: var(--light-green);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--primary-green-light);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.accordion-header:hover {
+  background: var(--primary-green-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.accordion-icon {
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  color: var(--primary-green);
+  transition: transform 0.3s ease;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion-icon.rotated {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding: 0 var(--spacing-4);
+}
+
+.accordion-content.expanded {
+  max-height: 500px;
+  padding: var(--spacing-4);
 }
 
 .about-highlights ul,
@@ -622,18 +665,6 @@ body {
   margin-bottom: var(--spacing-4);
 }
 
-.about-cta {
-  font-size: var(--font-size-lg);
-  color: var(--gray-700);
-  line-height: 1.7;
-  font-weight: 500;
-  text-align: center;
-  background: var(--light-green);
-  padding: var(--spacing-6);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--primary-green-light);
-  margin-top: var(--spacing-8);
-}
 
 /* Skills Section */
 .skills {
@@ -1233,14 +1264,17 @@ body {
 
   .about-intro,
   .about-collaboration,
-  .about-community p,
-  .about-cta {
+  .about-community p {
     font-size: var(--font-size-base);
   }
 
-  .about-highlights h3,
-  .about-community h3 {
+  .accordion-header {
     font-size: var(--font-size-lg);
+    padding: var(--spacing-2) var(--spacing-3);
+  }
+
+  .accordion-content.expanded {
+    max-height: 600px;
   }
 
   .hero-stats {
