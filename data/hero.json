@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "image": "vinay.jpg",
+    "imageAlt": "Vinay Gajjar",
+    "title": "Hi, I'm <span class=\"highlight\">Vinay</span>",
+    "subtitle": "Full-Stack Developer with 8+ years of experience",
+    "buttons": [
+      {
+        "text": "View My Work",
+        "class": "btn btn-primary",
+        "onclick": "scrollToSection('projects')"
+      },
+      {
+        "text": "Get In Touch",
+        "class": "btn btn-secondary",
+        "onclick": "scrollToSection('contact')"
+      }
+    ],
+    "marqueeItems": [
+      "Agile", "UI/UX", "Responsive", "Performance", "Code Review",
+      "Mentoring", "Testing", "DevOps", "Microservices", "CI/CD",
+      "Kubernetes", "GraphQL", "TypeScript", "MongoDB", "Redis",
+      "Security", "Monitoring", "Scrum", "TDD", "API Design"
+    ]
+  }
+}

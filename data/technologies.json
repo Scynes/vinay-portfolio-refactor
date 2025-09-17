@@ -1,0 +1,52 @@
+{
+  "technologies": [
+    {
+      "name": "Java",
+      "icon": "fab fa-java"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "fab fa-js-square"
+    },
+    {
+      "name": "React",
+      "icon": "fab fa-react"
+    },
+    {
+      "name": "Spring",
+      "icon": "fas fa-leaf"
+    },
+    {
+      "name": "Git",
+      "icon": "fab fa-git-alt"
+    },
+    {
+      "name": "Docker",
+      "icon": "fab fa-docker"
+    },
+    {
+      "name": "MySQL",
+      "icon": "fas fa-database"
+    },
+    {
+      "name": "REST APIs",
+      "icon": "fas fa-code"
+    },
+    {
+      "name": "Node.js",
+      "icon": "fab fa-node-js"
+    },
+    {
+      "name": "Python",
+      "icon": "fab fa-python"
+    },
+    {
+      "name": "AWS",
+      "icon": "fab fa-aws"
+    },
+    {
+      "name": "Vue.js",
+      "icon": "fab fa-vue"
+    }
+  ]
+}

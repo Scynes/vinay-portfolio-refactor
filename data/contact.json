@@ -1,0 +1,27 @@
+{
+  "contact": {
+    "title": "Let's Work Together",
+    "description": "Ready to bring your ideas to life? I'm always excited to collaborate on new projects and opportunities.",
+    "methods": [
+      {
+        "icon": "fas fa-envelope",
+        "text": "vgajjar22@gmail.com",
+        "href": "mailto:vgajjar22@gmail.com"
+      },
+      {
+        "icon": "fab fa-linkedin",
+        "text": "Connect on LinkedIn",
+        "href": "https://www.linkedin.com/in/vinaygajjar",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "icon": "fab fa-github",
+        "text": "View My GitHub",
+        "href": "https://github.com/v-gajjar",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    ]
+  }
+}
